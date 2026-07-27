@@ -16,15 +16,32 @@ body{
     display: none;
 }
 
-section{
-    background-color: white;
-    border: 2pc solid #333;
-    padding: 20px;
-    margin: 20px;
+header nav{
+    background-color: #808080;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    padding: 0.5% 5%;
+    align-items: center;
 }
 
-.test-box {
-    width: 300px;
-    padding: 20px;
-    border: 5px solid black;
+header nav ul{
+    display: flex;
+    gap: 30px;
+}
+
+header nav a{
+    text-decoration: none;
+    color: rgba(233, 227, 227, 0.862);
+    
+}
+
+header nav ul li{
+    list-style: none;
+}
+
+header nav a img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
 }
