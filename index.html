@@ -16,7 +16,7 @@
 <body>
     <header>
         <nav aria-label="Main Navigation">
-            <a href="#home">
+            <a href="#">
                 <img src="./assets/images/logo/logo.png" alt="Rishabh Portfolio Logo">
             </a>
 
@@ -37,8 +37,8 @@
                 <p>Aspiring Full Stack Developer passionate about building responsive, modern web applications while
                     continuously learning industry-standard technologies.</p>
                 <div class="hero-buttons">
-                    <a href="#projects">View Projects</a>
-                    <a href="#contact">Contact Me</a>
+                    <a class="btn" href="#projects">View Projects</a>
+                    <a class="btn" href="#contact">Contact Me</a>
                 </div>
             </div>
             <div class="hero-image">
@@ -46,8 +46,8 @@
             </div>
         </section>
 
-        <section id="about">
-            <h2>About Me</h2>
+        <section id="about" class="section-padding">
+            <h2 class="section-title">About Me</h2>
             <div class="about-container">
 
                 <figure class="about-image">
@@ -66,13 +66,13 @@
                             <li>Writing semantic and accessible HTML</li>
                         </ul>
                     </section>
-                    <a href="#" class="download-resume">Download Resume</a>
+                    <a href="#" class="download-resume btn">Download Resume</a>
                 </div>
             </div>
         </section>
 
-        <section id="skills">
-            <h2>Tech Stack</h2>
+        <section id="skills" class="section-padding">
+            <h2 class="section-title">Tech Stack</h2>
             <div class="skill-category">
                 <h3>Languages</h3>
                 <ul>
@@ -97,8 +97,8 @@
             </div>
         </section>
 
-        <section id="projects">
-            <h2>Live Projects</h2>
+        <section id="projects" class="section-padding">
+            <h2 class="section-title">Live Projects</h2>
             <article class="project-card">
                 <figure class="project-image">
                     <img src="assets/images/Project-Himesh-Vaghela-Bio-Data.png" alt="Himesh-bio-data-web">
@@ -126,9 +126,9 @@
                     </ul>
                 </div>
                 <div class="project-links">
-                    <a href="https://himesh-vaghela-bio-data.netlify.app/" target="_blank"
+                    <a class="btn" href="https://himesh-vaghela-bio-data.netlify.app/" target="_blank"
                         rel="noopener noreferrer">Live Demo</a>
-                    <a href="https://github.com/rishabhvaghela/Himesh-Bio-Data.git" target="_blank"
+                    <a class="btn" href="https://github.com/rishabhvaghela/Himesh-Bio-Data.git" target="_blank"
                         rel="noopener noreferrer">GitHub</a>
                 </div>
             </article>
@@ -158,16 +158,16 @@
                     </ul>
                 </div>
                 <div class="project-links">
-                    <a href="https://findcalcy.netlify.app/" target="_blank" rel="noopener noreferrer">Live Demo</a>
-                    <a href="https://github.com/rishabhvaghela/Calculator.git" target="_blank"
+                    <a class="btn" href="https://findcalcy.netlify.app/" target="_blank" rel="noopener noreferrer">Live Demo</a>
+                    <a class="btn" href="https://github.com/rishabhvaghela/Calculator.git" target="_blank"
                         rel="noopener noreferrer">GitHub</a>
                 </div>
             </article>
         </section>
 
-        <section id="contact">
+        <section id="contact" class="section-padding">
             <address>
-                <h2>Contact Me</h2>
+                <h2 class="section-title">Contact Me</h2>
                 <a href="tel:+91 8780835419">+91 8780835419</a>
                 <a href="mailto: rishabh.vaghela13@gmail.com">rishabh.vaghela13@gmail.com</a>
             </address>
@@ -199,7 +199,7 @@
                     </label>
                     <textarea name="message" id="message" placeholder="Write your message here..."></textarea>
                 </div>
-                <button type="submit">Send message</button>
+                <button type="submit" class="btn">Send message</button>
             </form>
         </section>
     </main>

@@ -19,8 +19,8 @@
     --primary-text: #F8FAFC;
     --secondary-text: #CBD5E1;
 
-    --accent-highlight: #06B6D4;
-    
+    --accent-highlight: #34ff34;
+
     --border-color: #475569;
 
     /* Fonts */
@@ -29,14 +29,33 @@
 
     /* Buttons */
 
-    --button-hover: ;
+    --button-hover: 0 0 20px var(--primary-color);
+    --button-padding: 10px;
+    --button-border-radius: 30px;
+    --button-border: 3px solid #bab5b524;
+    --button-font-weight: 500;
 
     /* Spacing */
 
-    --section-padding-x: ;
-    --section-padding-y: ;
+    --section-padding-x: 15px;
+    --section-padding-y: 15px;
     --container-max-width: 1200px;
     --content-width: 700px;
+
+    /* All Section heading after property*/
+
+    --section-head-background-color: #0f0f0f;
+    --section-head-width: 200px;
+    --section-head-height: 50px;
+    --section-head-border-radius: 30px;
+    --section-head-margin-left: 30px;
+
+    /* All Section heading after property*/
+
+    --active-margin: 2% 17px 0 0;
+    --active-width-height: 10px;
+    --active-border-radius: 50%;
+    --active-shadow: 0 0 13px 2px var(--accent-highlight);
 
     /* Border radius */
 
@@ -50,6 +69,10 @@
     --transition-medium: 0.7s ease-in-out;
     --transition-slow: 1s ease-in-out;
 
+    /* image attribute */
+
+    --image-border:4px solid #031b4b;
+    --image-shadow: 0 0 10px #3277ff;
 }
 
 
@@ -70,7 +93,7 @@ body {
 
 /* Navigation bar */
 nav {
-    background-color: #808080;
+    background-color: var(--surface-color);
     display: flex;
     justify-content: space-between;
     padding: 10px 30px;
@@ -85,7 +108,6 @@ nav ul {
 nav a {
     text-decoration: none;
     color: rgba(233, 227, 227, 0.862);
-
 }
 
 header nav ul li {
@@ -93,6 +115,7 @@ header nav ul li {
 }
 
 header nav a img {
+    flex-shrink: 0;
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -132,16 +155,18 @@ header nav a img {
     gap: 40px;
 }
 
-.hero-buttons a {
-    /* background-color: #ff0000; */
-    /* color: #000; */
+.btn {
     color: var(--primary-text);
     background-color: var(--primary-color);
-    font-weight: 500;
+    font-weight: var(--button-font-weight);
     text-decoration: none;
-    padding: 10px;
-    border: 3px solid #bab5b524;
-    border-radius: 30px;
+    padding: var(--button-padding);
+    border: var(--button-border);
+    border-radius: var(--button-border-radius);
+}
+
+.btn:hover {
+    box-shadow: var(--button-hover);
 }
 
 .hero-image {
@@ -153,4 +178,96 @@ header nav a img {
 .hero-image img {
     width: 100%;
     height: 100%;
+}
+
+/* About section */
+
+.section-padding {
+    padding: var(--section-padding-y);
+}
+
+.section-title {
+    width: var(--section-head-width);
+    height: var(--section-head-height);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--section-head-background-color);
+    border-radius: var(--section-head-border-radius);
+    margin-left: var(--section-head-margin-left);
+}
+
+.section-title::before {
+    content: '';
+    background-color: var(--accent-highlight);
+    width: var(--active-width-height);
+    height: var(--active-width-height);
+    border-radius: var(--active-border-radius);
+    margin: var(--active-margin);
+    box-shadow: var(--active-shadow);
+}
+
+.about-container {
+    max-width: var(--container-max-width);
+    margin-inline: auto;
+    width: 100%;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    gap: 80px;
+}
+
+.about-image {
+    flex: 1;
+    /* flex-shrink: 0; */
+    max-width: 420px;
+    padding: 25px 0;
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    border: var(--image-border);
+    border-radius: 10px;
+    box-shadow: var(--image-shadow) ;
+    background-color: #0a03372c;
+    backdrop-filter: blur(5px);
+}
+
+.about-content {
+    flex:2;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    padding-top: 30px;
+}
+
+.about-content p {
+    font-size: 20px;
+}
+
+.about-work h3 {
+    margin-bottom: 10px;
+    background-color: var(--section-head-background-color);
+    width: 150px;
+    height: 35px;
+    border-radius: var(--section-head-border-radius);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 15px 3px #606df8;
+}
+
+.inform-arrow {
+    filter: invert(1);
+    padding: 3px 5px 0;
+}
+
+.about-work ul li {
+    list-style: none;
+    padding: 5px 3px;
+}
+
+.download-resume {
+    width: 160.5px;
 }
