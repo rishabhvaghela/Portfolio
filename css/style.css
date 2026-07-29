@@ -19,13 +19,13 @@
     --primary-text: #F8FAFC;
     --secondary-text: #CBD5E1;
 
-    --accent-highlight: #34ff34;
+    --accent-highlight: #506ef1;
 
     --border-color: #475569;
 
     /* Fonts */
 
-    --font-primary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-primary:'Poppeins', sans-serif;
 
     /* Buttons */
 
@@ -66,7 +66,7 @@
     /* Transition */
 
     --transition-fast: 0.3s ease-in-out;
-    --transition-medium: 0.7s ease-in-out;
+    --transition-medium: 0.7s cubic-bezier(0.64, 0.02, 0.39, 0.98);
     --transition-slow: 1s ease-in-out;
 
     /* image attribute */
@@ -186,6 +186,7 @@ header nav a img {
     padding: var(--section-padding-y);
 }
 
+
 .section-title {
     width: var(--section-head-width);
     height: var(--section-head-height);
@@ -271,3 +272,45 @@ header nav a img {
 .download-resume {
     width: 160.5px;
 }
+
+/* Skills section */
+
+.skills-container{
+    max-width: var(--container-max-width);
+    margin-inline: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    padding-top: 30px;
+}
+
+.skills-card{
+    border-radius: var(--button-border-radius);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 16px;
+    backdrop-filter: blur(8px);
+    background-color: #817d7d07;
+    box-shadow:0 0 40px rgba(172, 164, 164, 0.242) inset;
+    transition: var(--transition-medium);
+}
+
+.skills-card:hover{
+    transform: translateY(-10px);
+    box-shadow:0 10px 20px var(--accent-highlight);
+}
+
+.skills-logo{
+    filter: invert(1);
+    width: 40px;
+    height: 40px;
+}
+
+.skills-level{
+    color: var(--secondary-text);
+    font-size: .9rem;
+}
+
