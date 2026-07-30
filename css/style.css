@@ -19,7 +19,8 @@
     --primary-text: #F8FAFC;
     --secondary-text: #CBD5E1;
 
-    --accent-highlight: #506ef1;
+    --accent-highlight: #50f16b;
+    --card-hover: #506ef1;
 
     --border-color: #475569;
 
@@ -88,6 +89,10 @@ body {
 
 ::-webkit-scrollbar {
     display: none;
+}
+
+.list{
+    list-style: none;
 }
 
 
@@ -208,27 +213,31 @@ header nav a img {
     box-shadow: var(--active-shadow);
 }
 
-.about-container {
+
+.container{
     max-width: var(--container-max-width);
     margin-inline: auto;
     width: 100%;
+}
+
+.about-container {
     padding: 0 20px;
     display: flex;
     align-items: center;
     gap: 80px;
 }
 
-.about-image {
+.image-structure {
     flex: 1;
-    /* flex-shrink: 0; */
+    flex-shrink: 0;
     max-width: 420px;
     padding: 25px 0;
 }
 
-.about-image img {
+.image-structure img {
+    border: var(--image-border);
     width: 100%;
     height: 100%;
-    border: var(--image-border);
     border-radius: 10px;
     box-shadow: var(--image-shadow) ;
     background-color: #0a03372c;
@@ -259,13 +268,7 @@ header nav a img {
     box-shadow: 0 0 15px 3px #606df8;
 }
 
-.inform-arrow {
-    filter: invert(1);
-    padding: 3px 5px 0;
-}
-
 .about-work ul li {
-    list-style: none;
     padding: 5px 3px;
 }
 
@@ -276,8 +279,6 @@ header nav a img {
 /* Skills section */
 
 .skills-container{
-    max-width: var(--container-max-width);
-    margin-inline: auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
@@ -300,7 +301,7 @@ header nav a img {
 
 .skills-card:hover{
     transform: translateY(-10px);
-    box-shadow:0 10px 20px var(--accent-highlight);
+    box-shadow:0 10px 20px var(--card-hover);
 }
 
 .skills-logo{
@@ -314,3 +315,31 @@ header nav a img {
     font-size: .9rem;
 }
 
+/* Project section */
+
+.project-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    gap: 40px;
+}
+
+.project-card{
+    display: flex;
+    flex-direction: column;
+    border:3px solid #031b4b;
+}
+
+.project-content{
+    max-width: 600px;
+}
+
+.project-tech-stack li{
+    width: max-content;
+    border: 3px solid #eae2e233;
+    border-radius: 70px;
+    padding: 8px;
+}
+
+.project-links{
+    margin-top: auto;
+}
