@@ -118,7 +118,7 @@
                     </figure>
                     <div class="skill">
                         <h3>Bootstrap</h3>
-                        <span class="skill-level">Beginner</span>
+                        <span class="skills-level">Beginner</span>
                     </div>
                 </article>
             </div>
@@ -141,14 +141,14 @@
                         and
                         relatives to view his biodata online in a clean and organized format.</p>
 
-                    <div class="stack">
+                    <section class="stack">
                         <h3 class="sub-heading">Using</h3>
                         <ul class="project-tech-stack list">
                             <li>HTML</li>
                             <li>CSS</li>
                             <li>JavaScript</li>
                         </ul>
-                    </div>
+                    </section>
                     <div class="project-links">
                         <a class="btn" href="https://himesh-vaghela-bio-data.netlify.app/" target="_blank"
                             rel="noopener noreferrer">Live Demo</a>
@@ -168,14 +168,14 @@
                         A simple calculator built to perform basic arithmetic operations. It includes multiple themes
                         and is
                         fully responsive across mobile, tablet, and desktop devices.</p>
-                    <div class="stack">
+                    <section class="stack">
                         <h3 class="sub-heading">Using</h3>
                         <ul class="project-tech-stack list">
                             <li>HTML</li>
                             <li>CSS</li>
                             <li>JavaScript</li>
                         </ul>
-                    </div>
+                    </section>
                     <div class="project-links">
                         <a class="btn" href="https://findcalcy.netlify.app/" target="_blank"
                             rel="noopener noreferrer">Live
@@ -188,40 +188,54 @@
         </section>
 
         <section id="contact" class="section-padding">
-            <address>
-                <h2 class="section-title">Contact Me</h2>
-                <a href="mailto: rishabh.vaghela13@gmail.com">rishabh.vaghela13@gmail.com</a>
-            </address>
-            <form action="">
-                <div class="inputgroup">
-                    <label for="full-name">
-                        Full Name
-                        <span>*</span>
-                    </label>
-                    <input id="full-name" type="text" name="full-name" placeholder="Enter your full name" required>
+            <h2 class="section-title">Contact Me</h2>
+            <div class="contact-container container">
+
+                <address class="contact-info">
+                    <h3 class="sub-heading">Contact Information</h3>
+                    <a href="mailto: rishabh.vaghela13@gmail.com">rishabh.vaghela13@gmail.com</a>
+                </address>
+                <div class="contact-form">
+                    <h3 class="sub-heading">Contact Form</h3>
+                    <form action="">
+                        <div class="input-container">
+                            <div class="inputgroup">
+                                <label for="full-name">
+                                    Full Name
+                                    <span class="required">*</span>
+                                </label>
+                                <input id="full-name" type="text" name="full-name" placeholder="Enter your full name"
+                                    required autocomplete="name">
+                            </div>
+                            <div class="inputgroup">
+                                <label for="email">
+                                    Email
+                                    <span class="required">*</span>
+                                </label>
+                                <input id="email" type="email" name="email" placeholder="Enter your email" required autocomplete="email">
+                            </div>
+                            <div class="inputgroup">
+                                <label for="phone-number">
+                                    Phone
+                                    <span class="optional">(Optional)</span>
+                                </label>
+                                <input id="phone-number" type="tel" name="phone-number"
+                                    placeholder="Enter your phone number" autocomplete="tel">
+                            </div>
+                            <div class="inputgroup">
+                                <label for="message">
+                                    Message
+                                    <span class="required">*</span>
+                                </label>
+                                <textarea name="message" id="message"
+                                    placeholder="Write your message here..." required></textarea>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="submit-btn btn">Send message</button>
+                    </form>
                 </div>
-                <div class="inputgroup">
-                    <label for="email">
-                        Email
-                        <span>*</span>
-                    </label>
-                    <input id="email" type="email" name="email" placeholder="Enter your email" required>
-                </div>
-                <div class="inputgroup">
-                    <label for="phone-number">
-                        Phone
-                        <span>(Optional)</span>
-                    </label>
-                    <input id="phone-number" type="tel" name="phone-number" placeholder="Enter your phone number">
-                </div>
-                <div class="inputgroup">
-                    <label for="message">
-                        Message
-                    </label>
-                    <textarea name="message" id="message" placeholder="Write your message here..."></textarea>
-                </div>
-                <button type="submit" class="btn">Send message</button>
-            </form>
+            </div>
         </section>
     </main>
     <footer>
