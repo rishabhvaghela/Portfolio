@@ -20,7 +20,7 @@
     --secondary-text: #c0c5ccb0;
 
     --section-highlight: #0fff5b;
-    --accent-highlight: #2185fff7;
+    --accent-highlight: #3da8ff;
     --required-highlight: #e11111;
     --card-hover: #506ef1;
 
@@ -108,7 +108,7 @@
 }
 
 .section-padding {
-    padding: var(--section-padding-y);
+    padding: var(--section-padding-y) 20px;
 }
 
 .section-title {
@@ -168,35 +168,71 @@ nav {
     z-index: 1000;
 }
 
-nav ul {
+.menu-bar {
+    filter: invert(1);
+    display: none;
+    position: fixed;
+    align-self: center;
+    right: 8%;
+}
+
+.links-group {
     display: flex;
     gap: 30px;
 }
 
-nav a {
+.links {
     text-decoration: none;
-    color: rgba(233, 227, 227, 0.862);
+    color: var(--primary-text);
+    position: relative;
 }
 
-nav ul li {
-    list-style: none;
+.links::after {
+    content: '';
+    /* color: transparent; */
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    transform: scaleX(0);
+    transform-origin: left;
+    border-radius: 999px;
+    background-color: var(--accent-highlight);
+    box-shadow: 0 0 10px var(--accent-highlight);
+    transition: transform 0.8s cubic-bezier(0.4, 0.01, 1, 1);
 }
 
-nav a img {
-    flex-shrink: 0;
+.links:hover::after {
+    transform: scaleX(1);
+}
+
+.list:active {
+    color: var(--accent-highlight);
+}
+
+.logo {
     width: 50px;
     height: 50px;
-    border-radius: 50%;
+    border-radius: 999px;
 }
 
-nav a img:hover {
+.logo img {
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+.logo:hover {
     box-shadow: 0 0 10px var(--primary-color);
 }
 
-nav a img:active {
+.logo:active {
     transform: scale(96%);
     transform: rotate(30deg);
-    box-shadow: 0 0 10px #1c1b1b inset;
+    box-shadow: 0 0 10px var(--primary-color) inset;
 }
 
 /* Hero Section */
@@ -219,12 +255,10 @@ nav a img:active {
 
 .hero-content h1 {
     font-size: 70px;
-    font-family: var(--font-primary);
 }
 
 .hero-content p {
     font-size: 20px;
-    font-family: var(--font-secondary);
 }
 
 .hero-buttons {
@@ -303,7 +337,7 @@ nav a img:active {
 
 .skills-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 40px;
     padding-top: 30px;
 }
@@ -380,7 +414,8 @@ nav a img:active {
 
 .project-tech-stack {
     display: flex;
-    gap: 20px;
+    padding-top: 12px;
+    gap: 10px;
 }
 
 .project-tech-stack li {
