@@ -4,15 +4,15 @@
         padding: 20px;
     }
 
-    .section-title{
+    .section-title {
         height: 40px;
     }
 
-    .sub-heading{
+    .sub-heading {
         height: 30px;
     }
 
-    .content-padding{
+    .content-padding {
         padding-top: 20px;
     }
 
@@ -96,10 +96,52 @@
         display: none;
     }
 
-    .about-content p, .about-work li{
+    .about-content p,
+    .about-work li {
         width: 285px;
         font-size: 15px;
         font-weight: 300;
     }
 
+    /* projects */
+
+    .project-card {
+        max-height: 320px;
+        gap: 20px;
+        overflow-y: scroll;
+    }
+
+    .project-image {
+        height: auto;
+    }
+
+    .project-image img {
+        width: 100%;
+        height: 100%;
+    }
+
+
+    .project-content {
+        font-size: 14px;
+    }
+
+    .project-tech-stack {
+        justify-content: center;
+        gap: 8px;
+    }
+
+    /* Contact section */
+
+    .contact-info a{
+        margin-left: 20px;
+    }
+
+    .contact-inputs{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .submit-btn{
+        align-self: center;
+    }
 }
