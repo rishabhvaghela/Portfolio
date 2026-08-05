@@ -1,4 +1,4 @@
-@media (max-width: 768px) {
+@media (max-width: 700px) {
 
     .section-padding {
         padding: 20px;
@@ -23,13 +23,33 @@
         z-index: 100; */
     }
 
+    .hamburger-menu img{
+        position: fixed;
+        right: 20;
+    }
+
     .menu-bar {
         display: block;
     }
 
+    aside ul {
+        max-height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        background-color: transparent;
+        backdrop-filter: blur(5px);
+        border: 3px solid var(--surface-color);
+        border-radius: 5px;
+        width: max-content;
+        align-items: center;
+        padding: 10px 0;
+        transform: translateY(25vh);
+    }
+
     .links-group {
         display: none;
-        flex-direction: column;
+        /* flex-direction: column;
         gap: 25px;
         background-color: transparent;
         backdrop-filter: blur(5px);
@@ -38,7 +58,7 @@
         width: 40%;
         align-items: center;
         padding: 10px 0;
-        transform: translateX(50vw) translateY(21vh);
+        transform: translateX(50vw) translateY(21vh); */
     }
 
     .links-group.active {
@@ -60,7 +80,9 @@
 
     .hero-image {
         flex: 1;
-        width: auto;
+        /* width: auto; */
+        width: 60%;
+        max-width: 280px;
         margin-bottom: 20px;
     }
 
@@ -72,10 +94,6 @@
         box-shadow: var(--image-shadow);
         background-color: #0a03372c;
         backdrop-filter: blur(5px);
-    }
-
-    .hero-content {
-        flex: 2;
     }
 
     .hero-buttons {
@@ -98,7 +116,7 @@
 
     .about-content p,
     .about-work li {
-        width: 285px;
+        width: 100%;
         font-size: 15px;
         font-weight: 300;
     }
@@ -106,9 +124,9 @@
     /* projects */
 
     .project-card {
-        max-height: 320px;
+        /* max-height: 320px; */
         gap: 20px;
-        overflow-y: scroll;
+        /* overflow-y: scroll; */
     }
 
     .project-image {
@@ -132,16 +150,16 @@
 
     /* Contact section */
 
-    .contact-info a{
+    .contact-info a {
         margin-left: 20px;
     }
 
-    .contact-inputs{
+    .contact-inputs {
         display: flex;
         flex-direction: column;
     }
 
-    .submit-btn{
+    .submit-btn {
         align-self: center;
     }
 }
